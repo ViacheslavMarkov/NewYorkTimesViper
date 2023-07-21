@@ -1,6 +1,4 @@
 disabled_rules:
-- trailing_whitespace
-- mark
 - comment_spacing
 - colon
 opt_in_rules:
@@ -9,7 +7,12 @@ opt_in_rules:
 excluded:
 - Carthage
 - Pods
+- trailing_whitespace
+- mark
 - SwiftLint/Common/3rdPartyLib
+
+min_length:
+    warning: 1
 line_length:
     warning: 100
     error: 200

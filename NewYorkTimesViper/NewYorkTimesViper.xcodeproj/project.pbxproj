@@ -8,22 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		0D69CD562A667BFB001EE878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D69CD552A667BFB001EE878 /* AppDelegate.swift */; };
-		0D69CD5A2A667BFB001EE878 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D69CD592A667BFB001EE878 /* CategoryViewController.swift */; };
 		0D69CD5D2A667BFB001EE878 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D69CD5B2A667BFB001EE878 /* Category.storyboard */; };
 		0D69CD602A667BFB001EE878 /* NewYorkTimesViper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D69CD5E2A667BFB001EE878 /* NewYorkTimesViper.xcdatamodeld */; };
 		0D69CD622A667BFD001EE878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D69CD612A667BFD001EE878 /* Assets.xcassets */; };
 		0D69CD652A667BFD001EE878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D69CD632A667BFD001EE878 /* LaunchScreen.storyboard */; };
+		0DDFEB992A66A0C300053C88 /* CategoryModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEB942A66A0C300053C88 /* CategoryModuleBuilder.swift */; };
+		0DDFEB9A2A66A0C300053C88 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEB952A66A0C300053C88 /* CategoryPresenter.swift */; };
+		0DDFEB9B2A66A0C300053C88 /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEB962A66A0C300053C88 /* CategoryRouter.swift */; };
+		0DDFEB9C2A66A0C300053C88 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEB972A66A0C300053C88 /* CategoryViewController.swift */; };
+		0DDFEB9D2A66A0C300053C88 /* CategoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEB982A66A0C300053C88 /* CategoryInteractor.swift */; };
+		0DDFEBA52A66AD1700053C88 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEBA42A66AD1700053C88 /* UIStoryboard+Extension.swift */; };
+		0DDFEBA72A66AD4700053C88 /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEBA62A66AD4700053C88 /* StoryboardName.swift */; };
+		0DDFEBA92A66AEA600053C88 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEBA82A66AEA600053C88 /* StoryboardIdentifiable.swift */; };
+		0DDFEBAB2A66AF1B00053C88 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEBAA2A66AF1B00053C88 /* ViewController+Extension.swift */; };
+		0DDFEBAD2A66AF4C00053C88 /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEBAC2A66AF4C00053C88 /* AlertDisplayable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D69CD522A667BFB001EE878 /* NewYorkTimesViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewYorkTimesViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D69CD552A667BFB001EE878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D69CD592A667BFB001EE878 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		0D69CD5C2A667BFB001EE878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Category.storyboard; sourceTree = "<group>"; };
 		0D69CD5F2A667BFB001EE878 /* NewYorkTimesViper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewYorkTimesViper.xcdatamodel; sourceTree = "<group>"; };
 		0D69CD612A667BFD001EE878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D69CD642A667BFD001EE878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D69CD662A667BFD001EE878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDFEB942A66A0C300053C88 /* CategoryModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModuleBuilder.swift; sourceTree = "<group>"; };
+		0DDFEB952A66A0C300053C88 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
+		0DDFEB962A66A0C300053C88 /* CategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
+		0DDFEB972A66A0C300053C88 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		0DDFEB982A66A0C300053C88 /* CategoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInteractor.swift; sourceTree = "<group>"; };
+		0DDFEBA42A66AD1700053C88 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		0DDFEBA62A66AD4700053C88 /* StoryboardName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardName.swift; sourceTree = "<group>"; };
+		0DDFEBA82A66AEA600053C88 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		0DDFEBAA2A66AF1B00053C88 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		0DDFEBAC2A66AF4C00053C88 /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,88 @@
 		0D69CD542A667BFB001EE878 /* NewYorkTimesViper */ = {
 			isa = PBXGroup;
 			children = (
-				0D69CD552A667BFB001EE878 /* AppDelegate.swift */,
-				0D69CD592A667BFB001EE878 /* CategoryViewController.swift */,
-				0D69CD5B2A667BFB001EE878 /* Category.storyboard */,
-				0D69CD612A667BFD001EE878 /* Assets.xcassets */,
-				0D69CD632A667BFD001EE878 /* LaunchScreen.storyboard */,
-				0D69CD662A667BFD001EE878 /* Info.plist */,
+				0DDFEBA22A66A55C00053C88 /* Modules */,
+				0DDFEBA12A66A54F00053C88 /* Helpers */,
+				0DDFEBA02A66A54300053C88 /* Extensions */,
+				0DDFEB9F2A66A53400053C88 /* Utilities */,
+				0DDFEB9E2A66A52800053C88 /* Models */,
+				0D69CD6D2A668E63001EE878 /* SuportingFiles */,
 				0D69CD5E2A667BFB001EE878 /* NewYorkTimesViper.xcdatamodeld */,
 			);
 			path = NewYorkTimesViper;
+			sourceTree = "<group>";
+		};
+		0D69CD6D2A668E63001EE878 /* SuportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0D69CD552A667BFB001EE878 /* AppDelegate.swift */,
+				0D69CD612A667BFD001EE878 /* Assets.xcassets */,
+				0D69CD632A667BFD001EE878 /* LaunchScreen.storyboard */,
+				0D69CD662A667BFD001EE878 /* Info.plist */,
+			);
+			path = SuportingFiles;
+			sourceTree = "<group>";
+		};
+		0D69CD6E2A669FBE001EE878 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0D69CD5B2A667BFB001EE878 /* Category.storyboard */,
+				0DDFEB942A66A0C300053C88 /* CategoryModuleBuilder.swift */,
+				0DDFEB952A66A0C300053C88 /* CategoryPresenter.swift */,
+				0DDFEB962A66A0C300053C88 /* CategoryRouter.swift */,
+				0DDFEB972A66A0C300053C88 /* CategoryViewController.swift */,
+				0DDFEB982A66A0C300053C88 /* CategoryInteractor.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		0DDFEB9E2A66A52800053C88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0DDFEB9F2A66A53400053C88 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0DDFEBA62A66AD4700053C88 /* StoryboardName.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0DDFEBA02A66A54300053C88 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DDFEBA42A66AD1700053C88 /* UIStoryboard+Extension.swift */,
+				0DDFEBAA2A66AF1B00053C88 /* ViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0DDFEBA12A66A54F00053C88 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0DDFEBA82A66AEA600053C88 /* StoryboardIdentifiable.swift */,
+				0DDFEBAC2A66AF4C00053C88 /* AlertDisplayable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0DDFEBA22A66A55C00053C88 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0D69CD6E2A669FBE001EE878 /* Category */,
+				0DDFEBA32A66A59400053C88 /* Book */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0DDFEBA32A66A59400053C88 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Book;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +251,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D69CD5A2A667BFB001EE878 /* CategoryViewController.swift in Sources */,
+				0DDFEB9A2A66A0C300053C88 /* CategoryPresenter.swift in Sources */,
+				0DDFEB9C2A66A0C300053C88 /* CategoryViewController.swift in Sources */,
+				0DDFEB9B2A66A0C300053C88 /* CategoryRouter.swift in Sources */,
+				0DDFEB9D2A66A0C300053C88 /* CategoryInteractor.swift in Sources */,
+				0DDFEBA92A66AEA600053C88 /* StoryboardIdentifiable.swift in Sources */,
+				0DDFEB992A66A0C300053C88 /* CategoryModuleBuilder.swift in Sources */,
 				0D69CD602A667BFB001EE878 /* NewYorkTimesViper.xcdatamodeld in Sources */,
+				0DDFEBAD2A66AF4C00053C88 /* AlertDisplayable.swift in Sources */,
+				0DDFEBA72A66AD4700053C88 /* StoryboardName.swift in Sources */,
+				0DDFEBAB2A66AF1B00053C88 /* ViewController+Extension.swift in Sources */,
+				0DDFEBA52A66AD1700053C88 /* UIStoryboard+Extension.swift in Sources */,
 				0D69CD562A667BFB001EE878 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,12 +411,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6Z5CWU22LN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewYorkTimesViper/Info.plist;
+				INFOPLIST_FILE = NewYorkTimesViper/SuportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Books New York Times";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Category;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,12 +439,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6Z5CWU22LN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewYorkTimesViper/Info.plist;
+				INFOPLIST_FILE = NewYorkTimesViper/SuportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Books New York Times";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Category;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
