@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OverviewDescriptionData: Decodable {
+struct OverviewDescriptionData: Decodable, Hashable {
     let listId      : Int
     let displayName : String
     let books       : [BookData]

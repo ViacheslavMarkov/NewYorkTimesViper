@@ -29,7 +29,7 @@ final class NetworkRequestManager: NSObject {
             let (data, response) = try await URLSession.shared.data(for: request)
             
             if let response = response as? HTTPURLResponse,
-               (200...300).contains(response.statusCode) {
+               (400...500).contains(response.statusCode) {
                 completion?(.failure(.init(message: "\(response.statusCode)")))
                 return
             }

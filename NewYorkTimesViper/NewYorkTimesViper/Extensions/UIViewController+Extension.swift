@@ -1,5 +1,5 @@
 //
-//  ViewController+Extension.swift
+//  UIViewController+Extension.swift
 //  NewYorkTimesViper
 //
 //  Created by Viacheslav Markov on 18.07.2023.

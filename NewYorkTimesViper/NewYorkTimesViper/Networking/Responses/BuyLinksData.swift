@@ -18,4 +18,4 @@ struct BuyLinksData: Decodable, Hashable {
         self.name   = name
         self.url    = url
     }
-    
+}

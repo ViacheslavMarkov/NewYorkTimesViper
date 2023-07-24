@@ -6,6 +6,9 @@
 //
 
 protocol CategoryPresenterProtocol: AnyObject {
+    func viewDidLoaded() async
+    func didFetchCategories(categories: [CategoryModel])
+    func presentAlert(message: String)
 }
 
 final class CategoryPresenter {
@@ -22,6 +25,18 @@ final class CategoryPresenter {
     }
 }
 
-//MARK: - CategoryPresenterProtocol
+// MARK: - CategoryPresenterProtocol
 extension CategoryPresenter: CategoryPresenterProtocol {
+    func presentAlert(message: String) {
+        view?.presentAlert(with: message)
+    }
+    
+    func didFetchCategories(categories: [CategoryModel]) {
+        print(categories.count)
+        view?.updateDynamicBooksDataSource(items: categories)
+    }
+    
+    func viewDidLoaded() async {
+        await interactor.fetchData()
+    }
 }
