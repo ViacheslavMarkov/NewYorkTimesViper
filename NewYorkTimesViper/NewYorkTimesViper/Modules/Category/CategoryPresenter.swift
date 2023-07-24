@@ -9,6 +9,7 @@ protocol CategoryPresenterProtocol: AnyObject {
     func viewDidLoaded() async
     func didFetchCategories(categories: [CategoryModel])
     func presentAlert(message: String)
+    func showBookVC(with books: [BookData])
 }
 
 final class CategoryPresenter {
@@ -27,6 +28,10 @@ final class CategoryPresenter {
 
 // MARK: - CategoryPresenterProtocol
 extension CategoryPresenter: CategoryPresenterProtocol {
+    func showBookVC(with books: [BookData]) {
+        router.didShowBookVC(with: books)
+    }
+    
     func presentAlert(message: String) {
         view?.presentAlert(with: message)
     }

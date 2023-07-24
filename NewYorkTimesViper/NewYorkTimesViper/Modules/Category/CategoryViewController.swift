@@ -52,7 +52,7 @@ private extension CategoryViewController {
         tableView.register(MessageTableViewCell.nib(), forCellReuseIdentifier: MessageTableViewCell.identifier)
     }
     
-    private func prepareDataSource() {
+     func prepareDataSource() {
         dataSource?.defaultRowAnimation = .fade
         dataSource = UITableViewDiffableDataSource(
             tableView: tableView
@@ -129,6 +129,12 @@ extension CategoryViewController: UITableViewDelegate {
             let item = dataSource?.snapshot().itemIdentifiers(inSection: section)[indexPath.row]
         else { return }
         print(item)
+        switch item {
+        case .list(let category):
+            presenter?.showBookVC(with: category.category.books)
+        case .emptyMessage(let _):
+            break
+        }
 //        delegate?.didTapItem(self, index: indexPath.row, item: item)
     }
 }

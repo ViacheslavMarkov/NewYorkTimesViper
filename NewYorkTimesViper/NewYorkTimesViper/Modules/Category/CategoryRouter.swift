@@ -11,8 +11,8 @@ protocol CategoryRouterProtocol {
 
 final class CategoryRouter: CategoryRouterProtocol {
     func didShowBookVC(with books: [BookData]) {
-//        let bookVC = Book
-//        viewController?.navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+        let bookVC = BookModuleBuilder.build(books: books)
+        viewController?.navigationController?.pushViewController(bookVC, animated: true)
     }
     
     weak var viewController: CategoryViewController?
