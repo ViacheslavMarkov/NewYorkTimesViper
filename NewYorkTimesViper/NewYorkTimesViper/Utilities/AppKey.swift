@@ -9,5 +9,5 @@ import Foundation
 
 struct AppKey {
     static let appKeyNYT = "OXveMY2X8qPL33JaEQEnd03dKcuGgllI"
-    static let coreDataName = "OverviewDB"
+    static let coreDataName = "NewYorkTimesViper"
 }

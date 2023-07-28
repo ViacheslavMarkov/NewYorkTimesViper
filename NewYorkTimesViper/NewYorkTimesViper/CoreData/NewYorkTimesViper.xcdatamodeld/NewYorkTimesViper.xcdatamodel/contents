@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22G74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BookEntity" representedClassName="BookEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="bookId" optional="YES" attributeType="String"/>
+        <attribute name="descriptions" optional="YES" attributeType="String"/>
+        <attribute name="imageUrlString" optional="YES" attributeType="String"/>
+        <attribute name="parentId" optional="YES" attributeType="String"/>
+        <attribute name="publisher" optional="YES" attributeType="String"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="links" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuyLinksEntity"/>
+    </entity>
+    <entity name="BuyLinksEntity" representedClassName="BuyLinksEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="linkId" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="parentId" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DescriptionEntity" representedClassName="DescriptionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="displayName" optional="YES" attributeType="String"/>
+        <attribute name="listId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookEntity"/>
+    </entity>
+    <entity name="OverviewEntity" representedClassName="OverviewEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="publishedDate" optional="YES" attributeType="String"/>
+        <relationship name="list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DescriptionEntity"/>
+    </entity>
+</model>

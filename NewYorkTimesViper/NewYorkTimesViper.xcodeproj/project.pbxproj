@@ -12,6 +12,9 @@
 		0D69CD602A667BFB001EE878 /* NewYorkTimesViper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D69CD5E2A667BFB001EE878 /* NewYorkTimesViper.xcdatamodeld */; };
 		0D69CD622A667BFD001EE878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D69CD612A667BFD001EE878 /* Assets.xcassets */; };
 		0D69CD652A667BFD001EE878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D69CD632A667BFD001EE878 /* LaunchScreen.storyboard */; };
+		0D99E85C2A73C9A50070EECC /* EntityNameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D99E85B2A73C9A50070EECC /* EntityNameType.swift */; };
+		0D99E85F2A73C9D80070EECC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D99E85E2A73C9D80070EECC /* CoreDataStack.swift */; };
+		0D99E8612A73CA110070EECC /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D99E8602A73CA110070EECC /* CoreDataService.swift */; };
 		0DDFEB992A66A0C300053C88 /* CategoryModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEB942A66A0C300053C88 /* CategoryModuleBuilder.swift */; };
 		0DDFEB9A2A66A0C300053C88 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEB952A66A0C300053C88 /* CategoryPresenter.swift */; };
 		0DDFEB9B2A66A0C300053C88 /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFEB962A66A0C300053C88 /* CategoryRouter.swift */; };
@@ -73,6 +76,9 @@
 		0D69CD612A667BFD001EE878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D69CD642A667BFD001EE878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D69CD662A667BFD001EE878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D99E85B2A73C9A50070EECC /* EntityNameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityNameType.swift; sourceTree = "<group>"; };
+		0D99E85E2A73C9D80070EECC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		0D99E8602A73CA110070EECC /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		0DDFEB942A66A0C300053C88 /* CategoryModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModuleBuilder.swift; sourceTree = "<group>"; };
 		0DDFEB952A66A0C300053C88 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
 		0DDFEB962A66A0C300053C88 /* CategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
@@ -163,7 +169,7 @@
 				0DDFEB9F2A66A53400053C88 /* Utilities */,
 				0DDFEB9E2A66A52800053C88 /* Models */,
 				0D69CD6D2A668E63001EE878 /* SuportingFiles */,
-				0D69CD5E2A667BFB001EE878 /* NewYorkTimesViper.xcdatamodeld */,
+				0D99E85D2A73C9CB0070EECC /* CoreData */,
 			);
 			path = NewYorkTimesViper;
 			sourceTree = "<group>";
@@ -193,6 +199,16 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		0D99E85D2A73C9CB0070EECC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0D69CD5E2A667BFB001EE878 /* NewYorkTimesViper.xcdatamodeld */,
+				0D99E85E2A73C9D80070EECC /* CoreDataStack.swift */,
+				0D99E8602A73CA110070EECC /* CoreDataService.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		0DDFEB9E2A66A52800053C88 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +227,7 @@
 				0DDFEBC22A6AA99700053C88 /* AppKey.swift */,
 				0DDFEBCF2A6AAAE500053C88 /* StatusType.swift */,
 				0DDFEC022A6EC2D000053C88 /* CellLayoutFactory.swift */,
+				0D99E85B2A73C9A50070EECC /* EntityNameType.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -363,7 +380,6 @@
 				0D69CD4E2A667BFB001EE878 /* Sources */,
 				0D69CD4F2A667BFB001EE878 /* Frameworks */,
 				0D69CD502A667BFB001EE878 /* Resources */,
-				0D69CD6C2A6687E5001EE878 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -424,27 +440,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0D69CD6C2A6687E5001EE878 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		0D69CD4E2A667BFB001EE878 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -462,6 +457,7 @@
 				0DDFEBC12A6AA96F00053C88 /* CategoryAPI.swift in Sources */,
 				0DDFEB9B2A66A0C300053C88 /* CategoryRouter.swift in Sources */,
 				0DDFEBDD2A6AB06600053C88 /* CategoryModel.swift in Sources */,
+				0D99E85F2A73C9D80070EECC /* CoreDataStack.swift in Sources */,
 				0DDFEBCC2A6AAA3200053C88 /* BookData.swift in Sources */,
 				0DDFEBF12A6E993600053C88 /* CategorySections.swift in Sources */,
 				0DDFEBF92A6EA24F00053C88 /* BookRouter.swift in Sources */,
@@ -489,12 +485,14 @@
 				0DDFEBC32A6AA99700053C88 /* AppKey.swift in Sources */,
 				0DDFEC062A6EC89900053C88 /* LinksView.swift in Sources */,
 				0DDFEBAB2A66AF1B00053C88 /* UIViewController+Extension.swift in Sources */,
+				0D99E8612A73CA110070EECC /* CoreDataService.swift in Sources */,
 				0DDFEBBA2A6A858900053C88 /* DateFormatter+Extension.swift in Sources */,
 				0DDFEBFA2A6EA24F00053C88 /* BookViewController.swift in Sources */,
 				0DDFEBB82A6A856600053C88 /* BaseURL.swift in Sources */,
 				0DDFEC0A2A6EC8E900053C88 /* DictionaryView.swift in Sources */,
 				0DDFEBA52A66AD1700053C88 /* UIStoryboard+Extension.swift in Sources */,
 				0DDFEBBE2A6A85EC00053C88 /* JSONDecoder+Extension.swift in Sources */,
+				0D99E85C2A73C9A50070EECC /* EntityNameType.swift in Sources */,
 				0DDFEBD02A6AAAE500053C88 /* StatusType.swift in Sources */,
 				0D69CD562A667BFB001EE878 /* AppDelegate.swift in Sources */,
 				0DDFEBCE2A6AAA5700053C88 /* BuyLinksData.swift in Sources */,

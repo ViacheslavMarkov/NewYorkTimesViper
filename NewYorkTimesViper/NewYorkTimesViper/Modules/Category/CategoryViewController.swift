@@ -32,6 +32,10 @@ final class CategoryViewController: UIViewController {
         super.viewDidLoad()
         initialize()
     }
+    
+    deinit {
+        print("deinit CategoryViewController")
+    }
 }
 
 // MARK: - Private functions
@@ -56,7 +60,8 @@ private extension CategoryViewController {
         dataSource?.defaultRowAnimation = .fade
         dataSource = UITableViewDiffableDataSource(
             tableView: tableView
-        ) { (tableView, indexPath, item) -> UITableViewCell? in
+        ) { [weak self] (_, indexPath, item) -> UITableViewCell? in
+            guard let self = self else { return nil }
             switch item {
             case .list(item: let model):
                 return self.cellForRowAt(indexPath, with: model)

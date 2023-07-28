@@ -29,6 +29,10 @@ class BookViewController: UIViewController {
         super.viewDidLoad()
         initialize()
     }
+    
+    deinit {
+        print("deinit BookViewController")
+    }
 }
 
 // MARK: - Private functions
@@ -64,49 +68,41 @@ private extension BookViewController {
         return UICollectionViewCompositionalLayout(sectionProvider: { [weak self] sectionIndex, layoutEnvironment in
             guard
                 let self = self
-//                let section = self.sectionFrom(section: sectionIndex)
             else {
                 return nil
             }
             
-//            switch section {
-//            case .first:
-                return CellLayoutFactory.makeFullWidthAndHeightWithoutHeaderCellLayout(
-                    itemWidth: .fractionalWidth(1),
-                    itemHeight: .estimated(60)
-                )
-//            }
+            return CellLayoutFactory.makeFullWidthAndHeightWithoutHeaderCellLayout(
+                itemWidth: .fractionalWidth(1),
+                itemHeight: .estimated(60)
+            )
         }, configuration: config)
     }
-    
-//    func sectionFrom(section: Int) -> BookSections? {
-//        dataSource?.snapshot().sectionIdentifiers[section]
-//    }
     
     func prepareDataSource() {
         dataSource = UICollectionViewDiffableDataSource(
             collectionView: collectionView
-        ) { (collectionView, indexPath, item) -> UICollectionViewCell? in
+        ) { [weak self] (_, indexPath, item) -> UICollectionViewCell? in
             switch item {
             case .list(item: let item):
-                return self.cellForRowAt(indexPath, with: item)
+                return self?.cellForRowAt(indexPath, with: item)
             }
         }
     }
     
     func cellForRowAt(
-       _ indexPath: IndexPath,
-       with model: BookData
-   ) -> UICollectionViewCell {
-       guard
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as? BookCollectionViewCell
-       else {
-           return UICollectionViewCell()
-       }
-       cell.configure(at: model)
-       cell.delegate = self
-       return cell
-   }
+        _ indexPath: IndexPath,
+        with model: BookData
+    ) -> UICollectionViewCell {
+        guard
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as? BookCollectionViewCell
+        else {
+            return UICollectionViewCell()
+        }
+        cell.configure(at: model)
+        cell.delegate = self
+        return cell
+    }
     
     func showSafari(link: String) {
         let url = URL(string: link)
